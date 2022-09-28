@@ -1,2 +1,9 @@
-# momentum
-Replace new tab page with a personal dashboard to help you get focused, stay organized, and keep motivated to achieve your goals.  Achieve your goals faster and more consistently with your own personal dashboard. Featuring to-do lists, weather, daily photos, and encouraging quotes. 
+### 🚀 Welcome to my new project Momentum developed for RSSchool
+
+Deployment project: https://irliss.github.io/momentum/
+
+Screen resolution in the context of responsive design for this project
+
+💻 Desktop
+
+    1920x1080 (standard desktop monitors)
