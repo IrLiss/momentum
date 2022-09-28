@@ -1,0 +1,32 @@
+const quoteText = document.querySelector('.js-quote-text');
+const quoteAuthor = document.querySelector('.js-quote-author');
+const quoteBtn = document.querySelector('.js-quote-btn');
+let quotesNumber;
+let randomQuote;
+
+async function getQuotes() {
+  const quotes = "assets/quotes/quotes-en.json";
+  const res = await fetch(quotes);
+  const data = await res.json();
+  quotesNumber = data.length;
+  getRandomQuote();
+
+  quoteText.textContent = `"${data[randomQuote].text}"`;
+  quoteAuthor.textContent = data[randomQuote].author;
+
+}
+
+function getRandomQuote() {
+  randomQuote = Math.floor(Math.random() * quotesNumber + 1);
+}
+
+function rotate() {
+  quoteBtn.classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', getQuotes);
+quoteBtn.addEventListener('click', getQuotes);
+quoteBtn.addEventListener('click', rotate);
+quoteBtn.addEventListener('animationend', () => {
+  quoteBtn.classList.remove('active');
+});
